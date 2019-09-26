@@ -4,9 +4,7 @@ const express = require("express");
 const server = express();
 const { PORT } = process.env;
 
-server.get("/", (req, res) => {
-  res.send("Go!");
-});
+require("./routes.js")(server);
 
 server.listen(PORT, () => {
   // eslint-disable-next-line no-console
