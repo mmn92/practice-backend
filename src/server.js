@@ -1,10 +1,14 @@
-require("dotenv").config();
-const express = require("express");
+import dotven from "dotenv";
+import express from "express";
+import db from "./config/database";
+import Routes from "./Routes";
+
+dotven.config();
 
 const server = express();
 const { PORT } = process.env;
 
-require("./routes.js")(server);
+Routes(server);
 
 server.listen(PORT, () => {
   // eslint-disable-next-line no-console

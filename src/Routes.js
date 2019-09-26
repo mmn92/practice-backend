@@ -1,7 +1,7 @@
-const routes = server => {
+const Routes = server => {
   server.get("/", (req, res) => {
     res.send("Go!");
   });
 };
 
-module.exports = routes;
+export default Routes;
