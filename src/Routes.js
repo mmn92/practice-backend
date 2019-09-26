@@ -1,7 +1,9 @@
-const Routes = server => {
-  server.get("/", (req, res) => {
-    res.send("Go!");
-  });
-};
+import { Router } from "express";
+import ServiceController from "./controllers/Service.controller";
 
-export default Routes;
+const routes = Router();
+
+routes.get("/", (req, res) => res.send("Go!"));
+routes.get("/service/summary", ServiceController.getSummary);
+
+export default routes;

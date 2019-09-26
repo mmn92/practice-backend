@@ -8,7 +8,7 @@ dotven.config();
 const server = express();
 const { PORT } = process.env;
 
-Routes(server);
+server.use(Routes);
 
 server.listen(PORT, () => {
   // eslint-disable-next-line no-console
